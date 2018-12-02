@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task1</title>
+    <link rel="stylesheet" type="text/css" href="task1.css">
+</head>
+<body>
+  <!-- jquery -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <div class="box-wrap" id="item">
+        <div class="box" id="item0" onmousedown="left(this)"></div>
+        <div class="box" id="item1" onmousedown="Forward(this)"></div>
+        <div class="box" id="item2" onmousedown="right(this)"></div>
+        <div class="box" id="item3" onmousedown="left(this)"></div>
+        <div class="box" id="item4" onmousedown="reset(this)"></div>
+        <div class="box" id="item5" onmousedown="right(this)"></div>
+        <div class="box" id="item6" onmousedown="Stop(this)"></div>
+        <div class="box" id="item7" onmousedown="Stop(this)"></div>
+        <div class="box" id="item8" onmousedown="Stop(this)"></div>
+</<body>
+
+
+
+<script>
+	function Forward(x) {
+		console.log("output");
+		$('#item4').css("background-color","green");;
+}
+ function Stop(x){
+   console.log('stop');
+   $('#item4').css("background-color","red");
+ }
+ function left(x){
+   console.log('left');
+   $('#item0').css("background-color","blue");
+   $('#item3').css("background-color","blue");
+ }
+ function right(x){
+   console.log('right');
+   $('#item2').css("background-color","blue");
+   $('#item5').css("background-color","blue");
+ }
+ function reset(x){
+   console.log('right');
+   $('#item0').css("background-color","orange");
+   $('#item3').css("background-color","orange");
+   $('#item2').css("background-color","orange");
+   $('#item5').css("background-color","orange");
+ }
+</script>
+</html>
